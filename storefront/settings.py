@@ -13,11 +13,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 from datetime import timedelta
+import environ
+
+env = environ.Env(DEBUG=(bool, False))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+environ.Env.read_env(BASE_DIR / ".env")
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -94,10 +97,10 @@ WSGI_APPLICATION = 'storefront.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'storefront3',
-        'HOST': 'localhost',
-        'USER': 'root',
-        'PASSWORD': 'root'
+        "NAME": env("DB_NAME"),
+        "USER": env("DB_USER"),
+        "HOST": env("DB_HOST"),
+        "PASSWORD": env("DB_PASSWORD"),
     }
 }
 
