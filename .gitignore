@@ -1,0 +1,8 @@
+*.pyc
+__pycache__
+migrations/
+.env
+.vscode
+Pipfile
+Pipfile.lock
+.DS*
