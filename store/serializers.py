@@ -2,7 +2,8 @@ from decimal import Decimal
 from django.db import transaction
 from rest_framework import serializers
 from .signals import order_created
-from .models import Cart, CartItem, Customer, Order, OrderItem, Product, Collection, Review
+from .models import (Cart, CartItem, Collection, Customer, Order, OrderItem, Product, ProductImage,
+    Review)
 
 
 class CollectionSerializer(serializers.ModelSerializer):
@@ -171,3 +172,8 @@ class CreateOrderSerializer(serializers.Serializer):
             order_created.send_robust(self.__class__, order=order)
 
             return order
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = ['id', 'image']
