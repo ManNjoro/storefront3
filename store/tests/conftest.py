@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 @pytest.fixture
 def api_client():
-    return APIClient()
+    return APIClient
 
 @pytest.fixture
 def authenticate(api_client):
