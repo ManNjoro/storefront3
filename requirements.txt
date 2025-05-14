@@ -1,0 +1,15 @@
+Django
+django_environ
+djangorestframework
+djangorestframework_simplejwt
+drf_nested_routers
+freezegun
+model_bakery
+pyotp
+pytest
+pillow
+django-filter
+django-cors-headers
+django-debug-toolbar
+mysqlclient
+pytest-django
