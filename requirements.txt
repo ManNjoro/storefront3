@@ -16,3 +16,5 @@ pytest-django
 redis
 celery
 djoser
+flower
+pytest-watch

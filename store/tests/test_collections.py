@@ -5,7 +5,7 @@ import pytest
 @pytest.fixture
 def create_collection(api_client):
     def do_create_collection(collection):
-        return api_client.post('/store/collections', collection)
+        return api_client.post('/store/collections/', collection)
     return do_create_collection
 
 @pytest.mark.django_db
