@@ -13,3 +13,5 @@ django-cors-headers
 django-debug-toolbar
 mysqlclient
 pytest-django
+redis
+celery
