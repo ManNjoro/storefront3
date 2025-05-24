@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
-from storefront.settings import MEDIA_ROOT, MEDIA_URL
+from storefront.settings.common import MEDIA_ROOT, MEDIA_URL
 
 admin.site.site_header = 'Storefront Admin'
 admin.site.index_title = 'Admin'
