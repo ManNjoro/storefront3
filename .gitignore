@@ -8,3 +8,4 @@ Pipfile.lock
 .DS*
 media/
 venv
+/static/
