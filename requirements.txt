@@ -22,3 +22,5 @@ locust
 django-silk
 django-redis
 whitenoise
+gunicorn
+dj-database-url
