@@ -19,3 +19,4 @@ djoser
 flower
 pytest-watch
 locust
+django-silk
