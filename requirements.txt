@@ -18,3 +18,4 @@ celery
 djoser
 flower
 pytest-watch
+locust
