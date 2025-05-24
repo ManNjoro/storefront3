@@ -20,3 +20,4 @@ flower
 pytest-watch
 locust
 django-silk
+django-redis
