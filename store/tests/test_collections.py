@@ -44,6 +44,11 @@ class TestRetrieveCollection:
     def test_if_collection_exists_returns_200(self, api_client):
         # Arrange
         collection = baker.make(Collection)
-        print(collection.__dict__)
+        response = api_client.get(f'/store/collections/{collection.id}/')
         
-        assert False
+        assert response.status_code == status.HTTP_200_OK
+        assert response.data == {
+            'id': collection.id,
+            'title': collection.title,
+            'products_count': 0
+        }
