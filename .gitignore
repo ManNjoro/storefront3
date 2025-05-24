@@ -9,3 +9,5 @@ Pipfile.lock
 media/
 venv
 /static/
+gene
+*.log
